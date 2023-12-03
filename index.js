@@ -1,4 +1,11 @@
-
+/*
+======================================
+Title: index.js
+Author: Evelyn Zepeda
+Date: 11/15/23
+Description: index.js page for Pets-R-Us
+=====================================
+*/
 
 //Import statements for express and node.js
 const express = require('express');
