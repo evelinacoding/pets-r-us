@@ -1,0 +1,42 @@
+<!----
+======================================
+Title: registration.ejs 
+Author: Evelyn Zepeda
+Date: 11/15/23
+Description: Registration Page for Pets-R-Us
+=====================================
+---->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+</head>
+<body>
+    <%- include('./partials/_header.ejs') %>
+
+    <div class="container">
+
+        <div class="main">
+            <h1>Register Here!</h1>
+            
+            <form>
+                <label for="customerId">Customer ID:</label><br>
+                <input class="input" type="text" name="customerId" required>
+            </form>
+            <form>
+                <label for="email">Email:</label><br>
+                <input class="input" type="text" name="email" required><br>
+            </form>
+            <form>
+                <input type="submit" value="Submit">
+            </form>
+            
+
+        </div>
+    </div>
+
+    <%- include('./partials/_footer.ejs') %>
+</body>
+</html>

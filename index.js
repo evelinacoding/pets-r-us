@@ -10,6 +10,10 @@ Description: index.js page for Pets-R-Us
 //Import statements for express and node.js
 const express = require('express');
 const path = require('path');
+const mongoose = require('mongoose')
+
+const Customer = require('./models/customer')
+
 
 
 //The express app variable which provides access to Express's built in functions/classes and creates a new Express App
@@ -36,6 +40,7 @@ app.get('/', (req, res) => {
     });
 });
 
+//To render the boarding page
 app.get('/boarding', (req, res) => {
     res.render('boarding', {
         title: "Pets-R-Us: Boarding",
@@ -51,6 +56,7 @@ app.get('/grooming', (req, res) => {
     });
 });
 
+//To render the training page
 app.get('/training', (req, res) => {
     res.render('training', {
         title: "Pets-R-Us: Training",
@@ -58,6 +64,34 @@ app.get('/training', (req, res) => {
     });
 });
 
+//To render the registration page
+app.get('/registration', (req, res) => {
+    res.render('registration', {
+        title: "Pets-R-Us: Registration",
+        pageTitle: "Registration Page"
+        
+    });
+});
+
+app.post('/registration', (req, res, next) => {
+    res.render('registration', {
+        title: 'Registration Form',
+        pageTitle: 'Create Registration'
+    })
+
+    console.log(newCustomer)
+
+    Customer.create(newCustomer, function(err, customer) {
+        if (err) {
+            console.log(err);
+            next(err)
+        } else {
+            res.render('index', {
+                title: 'Landing Page'
+            })
+        }
+    })
+})
 
 
 //To start the server port on 3000
