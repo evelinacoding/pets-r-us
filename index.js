@@ -2,8 +2,8 @@
 
 //Import statements for express and node.js
 const express = require('express');
-const logger = require('pino');
 const path = require('path');
+
 
 //The express app variable which provides access to Express's built in functions/classes and creates a new Express App
 const app = express();
@@ -25,6 +25,14 @@ app.get('/', (req, res) => {
     res.render('index', {
         title: "Pets-R-Us: Home",
         pageTitle: "Landing Page"
+        
+    });
+});
+
+app.get('/boarding', (req, res) => {
+    res.render('boarding', {
+        title: "Pets-R-Us: Boarding",
+        pageTitle: "Boarding Services"
     });
 });
 
@@ -36,8 +44,16 @@ app.get('/grooming', (req, res) => {
     });
 });
 
+app.get('/training', (req, res) => {
+    res.render('training', {
+        title: "Pets-R-Us: Training",
+        pageTitle: "Training Services"
+    });
+});
+
+
 
 //To start the server port on 3000
 app.listen(PORT, () => {
-    logger.info('Hello World application started and listening on port' + PORT)
-})
+    console.log('Hello World application started and listening on port ' + PORT)
+});

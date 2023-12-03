@@ -11,27 +11,13 @@ Description: Landing page for pets-r-us
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../public/styles/site.css">
+    
     <title>Pets-R-Us Home</title>
 </head>
 <body>
     <div class="container">
         
-        <header>
-            <h1>Pets-R-Us</h1>
-
-            <div class="nav-container">
-                <nav>
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li>Boarding</li>
-                        <li><a href="grooming.ejs"> Grooming</a></li>
-                        <li>Training</li>
-                        <li>Registration</li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
+        <%- include('./partials/_header.ejs') %>
 
             <div class="main">
 
@@ -46,7 +32,7 @@ Description: Landing page for pets-r-us
                     
                 <h3>Dog of the Week</h3>
                 <p>Meet Rosie, a beautiful German Shepherd.</p>
-                <img src="../public/images/ginger-dog.jpeg">
+                <img src="">
 
                 <h3>Testimonials</h3>
                 <p>"It is so beautiful the staff are fantastic my Charlie looked a million dollars after his first visit and we will be returning for definite he looks like a new dog highly recommend to me and I recommend highly to anyone else it’s a must treat for all ure pooches out there."</p>
@@ -64,6 +50,6 @@ Description: Landing page for pets-r-us
             </div>
     </div>
 
-    <footer href="#">Return Home</footer>
+    <%- include('./partials/_footer.ejs') %>
 </body>
 </html>

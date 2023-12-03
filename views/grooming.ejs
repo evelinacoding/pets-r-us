@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="views/styles/site.css">
+    
     <title>Grooming Services</title>
     <!----
 ======================================
@@ -15,22 +15,10 @@ Description: Grooming page for pets-r-us
 ---->
 </head>
 <body>
+    <%- include('./partials/_header.ejs') %>
     <div class="container">
-        <header>
-            <h1>Pets-R-Us</h1>
-
-            <div class="nav-container">
-                <nav>
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li>Boarding</li>
-                        <li><a href="grooming.ejs"> Grooming</a></li>
-                        <li>Training</li>
-                        <li>Registration</li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
+     
+        
 
         <div class="main">
             <h1>Our Grooming Services</h1>
@@ -44,6 +32,6 @@ Description: Grooming page for pets-r-us
         </div>
     </div>
 
-    <footer href="#">Return Home</footer>
+    <%- include('./partials/_footer.ejs') %>
 </body>
 </html>
