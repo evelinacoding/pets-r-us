@@ -14,8 +14,13 @@ const mongoose = require('mongoose')
 
 const Customer = require('./models/customer')
 
+const CONN = 'mongodb+srv://web340_admin:words11@bellevueuniversity.8vzftv7.mongodb.net/'
 
-
+mongoose.connect(CONN).then(() => {
+    console.log('Mongodb connection successful')
+}).catch(err => {
+    console.log('MongoDB Error ' + err.message)
+})
 //The express app variable which provides access to Express's built in functions/classes and creates a new Express App
 const app = express();
 
