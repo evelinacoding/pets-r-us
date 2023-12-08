@@ -1,0 +1,42 @@
+<!----
+======================================
+Title: customer-list.ejs 
+Author: Evelyn Zepeda
+Date: 12/07/23
+Description: Customer list page for Pets-R-Us
+=====================================
+---->
+
+<%- include('./partials/_header.ejs') %>
+
+<section>
+   <div class="container">
+        <h1>List of Registered Customers</h1>
+    
+        <% if(customers.length > 0) { %>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Customer ID</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <% customers.forEach(customer => { %>
+                <tr>
+                    <td><%= customer.customerID %></td>
+                    <td><%= customer.email %> </td>
+                </tr>
+
+            <% }) %>
+            </tbody>
+        </table>
+
+        <% } else { %>
+            <h3>Customers have not been added to the MongoDB database. Try adding some!</h3>
+            <% } %>
+    </div>
+</section>
+<%- include('./partials/_footer.ejs') %>

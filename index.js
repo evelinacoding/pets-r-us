@@ -78,6 +78,20 @@ app.get('/registration', (req, res) => {
     });
 });
 
+//To render the customer list page
+app.get('/customer-list', (req, res) => {
+
+    Customer.find().then(customers => {
+        res.render('customer-list', {
+            title: 'Pets-R-Us: Customer-List',
+            pageTitle: 'Customer List', 
+            customers: customers
+        })
+    }).catch(err => {
+        res.status(500).send('Customer list failed to load.' + err)
+    })
+})
+
 app.post('/registration', (req, res, next) => {
     res.render('registration', {
         title: 'Registration Form',
