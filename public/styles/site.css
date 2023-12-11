@@ -8,13 +8,54 @@ Description: CSS styles page
 */
 
 body {
-    background-color: pink;
+    background-color: rgb(152, 152, 221);
 }
 
-h1 {
-    color: white;
+header {
+    background-color: #1f1e5a;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
 }
 
 li {
     list-style-type: none;
+}
+
+h1 {
+    font-weight: 700;
+}
+
+
+.navbar {
+    overflow: hidden;
+    background-color: #524a47;
+    border-bottom: 15px solid #160631;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: #588397;
+    color: #e9dbff;
+}
+
+.container {
+    padding: 10px;
+    margin: 2% 5% 100px;
+}
+
+input {
+    text-align: center;
+}
+
+.container {
+    text-align: center;
 }

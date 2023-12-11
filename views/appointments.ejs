@@ -1,0 +1,42 @@
+<!----
+======================================
+Title: appointments.ejs 
+Author: Evelyn Zepeda
+Date: 12/10/23
+Description: Appointments page for Pets-R-Us
+=====================================
+---->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pets-R-Us Appointments</title>
+</head>
+<body>
+    <%- include('./partials/_header.ejs') %>
+
+    <div class="container">
+        <h1>Book an Appointment With Us!</h1>
+        <form action="/appointments" method="post">
+            <label for="userName">User Name:</label>
+            <input type="text" id="userName" name="userName" required><br>
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" required><br>
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" required><br>
+            <label for="userName">User Name:</label>
+            <input type="text" id="email" name="email" required><br>
+            <select name="service" id="service" required>
+                <% services.forEach((service) => { %>
+                    <option value="<%= service.value %>"><%= service.text  %></option>
+                <% }) %>
+            </select><br>
+
+            <button type="submit" id="btnAppointment">Create Appointment</button>
+        </form>
+    </div>
+    <%- include('./partials/_footer.ejs') %>
+</body>
+</html>

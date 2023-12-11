@@ -21,15 +21,13 @@ Description: Registration Page for Pets-R-Us
         <div class="main">
             <h1>Register Here!</h1>
             
-            <form>
-                <label for="customerId">Customer ID:</label><br>
-                <input class="input" type="text" name="customerId" required>
-            </form>
-            <form>
-                <label for="email">Email:</label><br>
-                <input class="input" type="text" name="email" required><br>
-            </form>
-            <form>
+            <form class="input" method="post" action="/registration">
+                <label for="customerId">Customer ID:</label>
+                <input class="input" type="text" name="customerID" id="customerID" required>
+           
+                <label for="email">Email:</label>
+                <input class="input" type="text" name="email" id="email" required>
+            
                 <input type="submit" value="Submit">
             </form>
             
