@@ -7,6 +7,13 @@ Description: CSS styles page
 =====================================
 */
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
 body {
     background-color: rgb(152, 152, 221);
 }
@@ -14,8 +21,21 @@ body {
 header {
     background-color: #1f1e5a;
     color: #fff;
-    padding: 20px;
     text-align: center;
+}
+
+#pets-title {
+    padding: 20px;
+}
+
+#dog {
+    width: 100%;
+}
+
+.container {
+    width: 1000px;
+    background-color: #bbbafd;
+    margin-left: 400px;
 }
 
 li {
@@ -23,14 +43,28 @@ li {
 }
 
 h1 {
-    font-weight: 700;
+   
+    font-size: 40px;
 }
 
+h3 {
+    padding: 20px;
+}
+
+.main {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 20px;
+}
+
+p {
+    padding: 20px;
+}
 
 .navbar {
     overflow: hidden;
     background-color: #524a47;
     border-bottom: 15px solid #160631;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .navbar a {
@@ -47,10 +81,6 @@ h1 {
     color: #e9dbff;
 }
 
-.container {
-    padding: 10px;
-    margin: 2% 5% 100px;
-}
 
 input {
     text-align: center;
@@ -58,4 +88,81 @@ input {
 
 .container {
     text-align: center;
+}
+
+#customer-title {
+    margin: 50px;
+    padding: 30px;
+}
+
+.input {
+    margin: 40px 5px 40px 5px;
+}
+
+table {
+    background-color: rgb(152, 152, 221);
+    margin: 0 auto;
+    width: 400px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.table-container {
+    text-align: center;
+    margin: 50px 100px;
+}
+
+thead {
+    background-color: #e9dbff;
+    
+}
+
+th {
+    font-size: 20px;
+}
+
+#spacing {
+   padding: 50px;
+}
+
+label {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+input {
+    margin: 10px;
+    padding: 2px;
+}
+
+select {
+    margin: 30px;
+    font-size: 14px;
+    padding: 5px;
+}
+
+.btn {
+    padding: 15px;
+    background-color: #e9dbff;
+    border: 2px solid #8f8eda;
+    color: rgb(109, 107, 228);
+    width: 200px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+}
+
+#email-title {
+    margin-top: 50px;
+    font-size: 20px;
+}
+
+.form {
+    padding: 20px;
+}
+
+footer {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#email {
+    padding: 5px;
+    width: 300px;
 }

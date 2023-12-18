@@ -9,13 +9,13 @@ Description: Customer list page for Pets-R-Us
 
 <%- include('./partials/_header.ejs') %>
 
-<section>
+
    <div class="container">
-        <h1>List of Registered Customers</h1>
+        <h1 id="customer-title">List of Registered Customers</h1>
     
         <% if(customers.length > 0) { %>
-
-        <table id="customer-list">
+        <div class="table-container">
+        <table>
             <thead>
                 <tr>
                     <th>Customer ID</th>
@@ -37,6 +37,6 @@ Description: Customer list page for Pets-R-Us
         <% } else { %>
             <h3>Customers have not been added to the MongoDB database. Try adding some!</h3>
             <% } %>
+            </div><%- include('./partials/_footer.ejs') %>
     </div>
-</section>
-<%- include('./partials/_footer.ejs') %>
+

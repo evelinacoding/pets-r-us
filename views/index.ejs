@@ -16,9 +16,10 @@ Description: Landing page for pets-r-us
     <title>Pets-R-Us Home</title>
 </head>
 <body>
+    <%- include('./partials/_header.ejs') %>
     <div class="container">
         
-        <%- include('./partials/_header.ejs') %>
+        
 
             <div class="main">
 
@@ -32,15 +33,15 @@ Description: Landing page for pets-r-us
                 <p>Fri-Sun: 9am-7pm</p>
                     
                 <h3>Dog of the Week</h3>
-                <p>Meet Rosie, a beautiful German Shepherd.</p>
-                <img src="images/ginger-dog.jpeg">
+                <p>Meet Rosie, a beautiful happy pup!</p>
+                <img id="dog" src="images/ginger-dog.jpeg">
 
                 <h3>Testimonials</h3>
                 <p>"It is so beautiful the staff are fantastic my Charlie looked a million dollars after his first visit and we will be returning for definite he looks like a new dog highly recommend to me and I recommend highly to anyone else it’s a must treat for all ure pooches out there."</p>
 
                 <p>"Amazing treatments and they are so lovely to the dogs! You can tell they really love the dogs and want them to feel comfortable and happy."</p>
 
-                <p>"We took our old red setter Ruby to Pets-R-Us today and they were amazing. Her coat had been destroyed by being spayed! But they sorted her coat out and also helped her stay calm, the difference in her when we picked her up was unbelievable usually she is shaking, but not this time Oh and she looked gorgeous too. Thank you we will be back/"</p>
+                <p>"We took our old red setter Ruby to Pets-R-Us today and they were amazing. Her coat had been destroyed by being spayed! But they sorted her coat out and also helped her stay calm, the difference in her when we picked her up was unbelievable usually she is shaking, but not this time Oh and she looked gorgeous too. Thank you we will be back."</p>
 
                 <p>Bella had her first puppy groom and she looked amazing. I was a bit nervous how she would react leaving her but she had an amazing time and was so happy when we collected her. I’ll definitely be going back for all her grooming, great recommendation.</p>
 
@@ -48,9 +49,9 @@ Description: Landing page for pets-r-us
                 <p>If you have any questions please contact us at the following phone number:</p>
 
                 <p>323-457-3455</p>
-            </div>
+            </div><%- include('./partials/_footer.ejs') %>
     </div>
 
-    <%- include('./partials/_footer.ejs') %>
+    
 </body>
 </html>

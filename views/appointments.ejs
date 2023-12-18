@@ -18,15 +18,15 @@ Description: Appointments page for Pets-R-Us
     <%- include('./partials/_header.ejs') %>
 
     <div class="container">
-        <h1>Book an Appointment With Us!</h1>
-        <form action="/appointments" method="post">
+        <h1 id="spacing">Book an Appointment With Us!</h1>
+        <form action="/appointments" method="post" id="appointment-container">
             <label for="userName">User Name:</label>
             <input type="text" id="userName" name="userName" required><br>
             <label for="firstName">First Name:</label>
             <input type="text" id="firstName" name="firstName" required><br>
             <label for="lastName">Last Name:</label>
             <input type="text" id="lastName" name="lastName" required><br>
-            <label for="userName">User Name:</label>
+            <label for="email">Email:</label>
             <input type="text" id="email" name="email" required><br>
             <select name="service" id="service" required>
                 <% services.forEach((service) => { %>
@@ -34,9 +34,10 @@ Description: Appointments page for Pets-R-Us
                 <% }) %>
             </select><br>
 
-            <button type="submit" id="btnAppointment">Create Appointment</button>
+            <button type="submit" class="btn">Create Appointment</button>
         </form>
+        <%- include('./partials/_footer.ejs') %>
     </div>
-    <%- include('./partials/_footer.ejs') %>
+    
 </body>
 </html>

@@ -155,6 +155,26 @@ app.post('/registration', (req, res, next) => {
     
 })
 
+app.get('/my-appointments', (req, res) => {
+
+    res.render('my-appointments', {
+        title: "Pets-R-Us: Appointments List",
+        pageTitle: "Appointments List",
+       
+    })
+})
+
+app.get('/api/appointments/:email', async(req, res, next) => {
+    Appointments.find({'email': req.params.email}, function(err, email) {
+        if(err) {
+            console.log(err);
+            next(err)
+        } else {
+            res.json(email);
+        }
+    })
+})
+
 
 //To start the server port on 3000
 app.listen(PORT, () => {

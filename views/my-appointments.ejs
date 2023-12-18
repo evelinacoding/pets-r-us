@@ -1,0 +1,42 @@
+<%- include('./partials/_header.ejs') %>
+
+<div class="container">
+    <section>
+        <br>
+        <div><h1>Order Lookup Form</div></h1>
+
+
+        <div class="form">
+            <label for="email" id="email-title">Email</label><br>
+            <input type="text" class="input" name="email" id="email" placeholder="Enter Email" required>
+        </div>
+
+        <div class="form">
+            <input type="submit" value="Search" id="search" class="btn">
+        </div>
+
+        <div class="list" id="appointments"></div>
+        
+    </section><%- include('./partials/_footer.ejs') %>
+</div>
+
+<script>
+
+    document.getElementById('search').onclick = function() {
+        const email = document.getElementById('email').value;
+        fetch('/api/appointments/' + email)
+        .then(res => res.json())
+        .then(data => {
+            let tableData = `<h4 style="font-size 32px; text-align: center; padding-bottom: 10px; font-weight: lighter">My Appointments</h4>
+            <table id="tableData" style=" width: 100%; class="table"><tr><th>First name</th><th>Last name</th><th>Username</th><th>Service</th></tr>`
+                for(const appointment of data) {
+                    tableData += `<tr><td>${appointment.firstName}</td><td>${appointment.lastName}</td><td>${appointment.userName}</td><td>${appointment.service}</td></tr>`;
+                }
+                tableData += `</table>`;
+                document.getElementById('appointments').innerHTML = tableData;
+        });
+        
+    }
+</script>
+
+
