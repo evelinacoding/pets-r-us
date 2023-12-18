@@ -7,7 +7,7 @@
     "start": "node index.js",
     "dev": "nodemon index.js"
   },
-  "engines" {
+  "engines": {
     "node": "16.14.2",
     "npm": "10.2.3"
   },
